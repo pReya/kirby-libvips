@@ -1,6 +1,6 @@
 {
     "name": "bitbetter/kirby-libvips",
-    "description": "libvips (vipsthumbnail) thumbnail driver for Kirby CMS",
+    "description": "Fast, memory-efficient libvips thumbnail driver for Kirby CMS with in-process (php-vips FFI) and CLI backends",
     "type": "kirby-plugin",
     "license": "MIT",
     "keywords": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bitbetterde\Libvips;
+namespace Bitbetter\Libvips;
 
 use Exception;
 use Kirby\Filesystem\F;

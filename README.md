@@ -7,7 +7,7 @@ Requires **Kirby 4 or 5**, **PHP ≥ 8.1** and **libvips ≥ 8.15** installed on
 ## Installation
 
 ```
-composer require bitbetterde/kirby-libvips
+composer require bitbetter/kirby-libvips
 ```
 
 Or copy this repository to `/site/plugins/kirby-libvips`.

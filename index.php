@@ -2,7 +2,7 @@
 
 use Kirby\Cms\App;
 use Kirby\Image\Darkroom;
-use Bitbetterde\Libvips\Vips;
+use Bitbetter\Libvips\Vips;
 
 if (class_exists(Vips::class) === false) {
 	require_once __DIR__ . '/classes/Vips.php';
@@ -13,4 +13,4 @@ if (class_exists(Vips::class) === false) {
 Darkroom::$types['vips'] ??= Vips::class;
 Darkroom::$types['vipsthumbnail'] ??= Vips::class;
 
-App::plugin('bitbetterde/kirby-libvips', []);
+App::plugin('bitbetter/kirby-libvips', []);

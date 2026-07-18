@@ -1,5 +1,5 @@
 {
-    "name": "bitbetterde/kirby-libvips",
+    "name": "bitbetter/kirby-libvips",
     "description": "libvips (vipsthumbnail) thumbnail driver for Kirby CMS",
     "type": "kirby-plugin",
     "license": "MIT",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bitbetterde\\Libvips\\": "classes/"
+            "Bitbetter\\Libvips\\": "classes/"
         }
     },
     "suggest": {

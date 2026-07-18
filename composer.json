@@ -1,16 +1,34 @@
 {
-    "name": "floriankarsten/kirby3-vipsthumbnail",
-    "description": "Kirby3 vipsthumbnail thumbnail driver",
+    "name": "preya/kirby-libvips",
+    "description": "libvips (vipsthumbnail) thumbnail driver for Kirby CMS",
     "type": "kirby-plugin",
     "license": "MIT",
-    "version": "0.0.1",
+    "keywords": [
+        "kirby",
+        "kirby-plugin",
+        "libvips",
+        "vips",
+        "thumbnails"
+    ],
     "authors": [
+        {
+            "name": "Moritz Stueckler"
+        },
         {
             "name": "Florian Karsten",
             "email": "code@floriankarsten.com"
         }
     ],
     "require": {
-        "getkirby/composer-installer": "^1.1"
+        "php": ">=8.1",
+        "getkirby/composer-installer": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Preya\\Libvips\\": "classes/"
+        }
+    },
+    "suggest": {
+        "jcupitt/vips": "In-process thumbnail generation via FFI - eliminates the ~60ms process-spawn cost per thumb"
     }
 }

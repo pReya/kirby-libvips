@@ -1,19 +1,16 @@
 <?php
+
 use Kirby\Cms\App;
+use Kirby\Image\Darkroom;
+use Preya\Libvips\Vips;
 
-if(option('thumbs.driver') === 'vipsthumbnail') {
-
-	if (! class_exists('Floriankarsten\Vipsthumbnail')) {
-		require_once __DIR__ . '/Vipsthumbnail.php';
-	}
-
-	Kirby::plugin('Floriankarsten/Vipsthumbnail', [
-		'components' => [
-			'thumb' => function (App $kirby, string $src, string $dst, array $options) {
-				$vipsThumbnailer = new \Floriankarsten\Vipsthumbnail($src, $dst, $options);
-				return $vipsThumbnailer->process();
-			}
-		]
-	]);
-
+if (class_exists(Vips::class) === false) {
+	require_once __DIR__ . '/classes/Vips.php';
 }
+
+// register the darkroom driver for `thumbs.driver => 'vips'`
+// ('vipsthumbnail' is kept as a legacy alias)
+Darkroom::$types['vips'] ??= Vips::class;
+Darkroom::$types['vipsthumbnail'] ??= Vips::class;
+
+App::plugin('preya/kirby-libvips', []);
